@@ -3,13 +3,13 @@ from hugchat import hugchat
 from hugchat.login import Login
 
 # App title
-st.set_page_config(page_title="EdgeRed AI Assistant")
+st.set_page_config(page_title="🤗💬 HugChat")
 
 # Hugging Face Credentials
 with st.sidebar:
-    st.title('EdgeRed AI Assistant front end testing')
+    st.title('🤗💬 HugChat')
     if ('EMAIL' in st.secrets) and ('PASS' in st.secrets):
-        st.success('Login credentials already provided!', icon='✅')
+        st.success('HuggingFace Login credentials already provided!', icon='✅')
         hf_email = st.secrets['EMAIL']
         hf_pass = st.secrets['PASS']
     else:
@@ -19,7 +19,7 @@ with st.sidebar:
             st.warning('Please enter your credentials!', icon='⚠️')
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
-    st.markdown('Reference: [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!')
+    st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!')
     
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
